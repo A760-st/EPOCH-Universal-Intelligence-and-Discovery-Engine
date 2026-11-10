@@ -24,18 +24,13 @@ novelty, or replace human judgment.
 
 ## The investigation workflow
 
-```mermaid
-flowchart LR
-    A[Research question] --> B[Approved dataset]
-    B --> C[Explore and record evidence]
-    C --> D[Draft competing hypotheses]
-    D --> E[Plan an allow-listed test]
-    E --> F{Researcher approval}
-    F -->|Approve| G[Reproducible run]
-    F -->|Revise| E
-    G --> H[Review results and limitations]
-    H --> I[Revise hypotheses and report]
-```
+1. Define a research question and select an approved dataset.
+2. Explore the data and record relevant evidence.
+3. Draft competing hypotheses.
+4. Plan an allow-listed test and review its assumptions.
+5. The researcher approves the test or sends it back for revision.
+6. Run the approved test reproducibly.
+7. Review the results and limitations, then revise the hypotheses and report.
 
 Each investigation is intended to preserve the links between:
 
