@@ -80,23 +80,29 @@ claims, and multi-agent orchestration are outside the initial scope.
 
 ## Proposed architecture
 
-The current architecture proposal describes a React and TypeScript web app,
-a Python and FastAPI API, PostgreSQL for structured records, object storage
-for datasets and artifacts, and a background worker for approved experiments.
-An AI provider adapter is optional and should never be responsible for
-statistical computation.
+The consolidated proposal describes a modular application with a React and
+TypeScript frontend, a Python and FastAPI API, PostgreSQL for records, queue,
+and audit chain, and isolated executors for approved experiments. Object
+storage is part of the hosted deployment path. AI is optional and does not
+perform statistical computation.
 
-These are proposed choices, not implemented or finalized technologies. See
-the [website and system architecture](./EPOCH_WEBSITE_ARCHITECTURE.md) for
-the component design, data model, API outline, deployment topology, and open
-decisions.
+These are proposed choices, not implemented technologies. See the
+[consolidated system architecture](./EPOCH_Final_System_Architecture_v2.md)
+for the design, data model, safeguards, build order, and open decisions.
 
 ## Project documents
 
 | Document | Description |
 | --- | --- |
-| [Product ideation and research](./EPOCH_IDEATION_AND_RESEARCH.md) | Problem framing, intended users, research landscape, proposed MVP, risks, and evaluation plan. |
-| [Website and system architecture](./EPOCH_WEBSITE_ARCHITECTURE.md) | User journey, pages, components, data model, API outline, safeguards, and implementation phases. |
+| [Consolidated system architecture](./EPOCH_Final_System_Architecture_v2.md) | Current architecture baseline, integrity core, data model, safeguards, build order, and open decisions. |
+| [Adithya — Technical Lead and Integrity Engine](./EPOCH_Work_Division_1_Adithya.pdf) | 30% allocation: engine contract, data and split logic, prediction validation, verdict evaluation, CLI, and integration. |
+| [Sushma Gouda — Backend Platform and Workflow API](./EPOCH_Work_Division_2_Sushma_Gouda.pdf) | 30% allocation: API, database and migrations, access control, workflow state, run ledger, and audit persistence. |
+| [Atul Dhull — Execution, Sandbox, and Verification](./EPOCH_Work_Division_3_Atul_Dhull.pdf) | 25% allocation: executor lifecycle, job execution, sandbox isolation, artifact handling, security tests, and reproducibility. |
+| [Pranav Aditya — Frontend and User Documentation](./EPOCH_Person_4_Pranav_Aditya_Work_Plan.pdf) | 15% allocation: investigation workflow UI, evidence and result presentation, API integration, frontend tests, and user/demo documentation. |
+
+The work plans assign ownership, deliverables, dependencies, and acceptance
+criteria for each role. They are plans, not claims that the assigned work has
+been completed.
 
 ## Current focus
 
